@@ -41,7 +41,6 @@ class DataBase {
 
   //DELETE
   void delete(String id) async {
-    Uri url = Uri.parse('https://first-app-5b37b-default-rtdb.firebaseio.com/markets/$id.json');
-    await http.delete(url);
+    
   }
 }
