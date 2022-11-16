@@ -14,7 +14,9 @@ class DataBase {
       "number": number,
     });
 
-    await http.post(url, body: _json);
+    final res = await http.post(url, body: _json);
+    print('POST');
+    print(res.body);
   }
 
   // GET from DB
@@ -23,24 +25,15 @@ class DataBase {
     Uri url = Uri.parse('https://first-app-5b37b-default-rtdb.firebaseio.com/markets.json');
     final res = await http.get(url);
 
-    //if nothing is found return an empty List.
-    if (res.body == 'null') return [];
-
-    final _json = json.decode(res.body) as Map<String, dynamic>;
-
     List<Market> markes = [];
-    _json.forEach((key, value) {
-      markes.add(Market(
-        id: key,
-        name: value['name'],
-        phoneNumber: value['number'],
-      ));
-    });
+
+    //TODO: add fetchd data to the markets list.
+
     return markes;
   }
 
   //DELETE
   void delete(String id) async {
-    
+    //delete by id.
   }
 }
