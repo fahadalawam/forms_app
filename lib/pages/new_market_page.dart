@@ -30,34 +30,6 @@ class _NewMarketPageState extends State<NewMarketPage> {
       body: Center(
         child: SizedBox(
           width: 300,
-          child: Form(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(height: 50),
-                Text('اضافة متجر جديد'),
-                SizedBox(height: 50),
-                TextFormField(
-                  decoration: InputDecoration(
-                    label: Text('اسم المتجر'),
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-                SizedBox(height: 30),
-                TextFormField(
-                  decoration: InputDecoration(
-                    label: Text('رقم الهاتف'),
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-                SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: send,
-                  child: Text('ارسال'),
-                )
-              ],
-            ),
-          ),
         ),
       ),
     );
